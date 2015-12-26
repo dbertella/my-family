@@ -13,12 +13,11 @@ var memberStyle = {
   margin: 10
 };
 
-
 class Member extends Component {
   render() {
     const { member } = this.props;
     return(
-      <div style={memberStyle}>
+      <div data-id={member.id} style={memberStyle}>
         { member.name }
         { member.surname }
         { member.bornDate }
@@ -33,7 +32,6 @@ var familyStyle = {
   justifyContent: 'center',
 };
 class Family extends Component {
-
   getMember(memberId) {
     const { members } = this.props.family;
     const member = _.find(members, {id: memberId});
@@ -49,7 +47,8 @@ class Family extends Component {
       <div>
         <h2 style={{textAlign: 'center'}}>{family.name}</h2>
         <div style={familyStyle}>
-          <Member member={this.getMember(family.husband.id)} />
+          <Member member={this.getMember(family.husband.id)}
+            wife={this.getMember(family.wife.id)} />
           <Member member={this.getMember(family.wife.id)} />
         </div>
         <div style={familyStyle}>

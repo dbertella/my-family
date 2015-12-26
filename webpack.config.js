@@ -31,11 +31,12 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['react-hot', 'babel?'+JSON.stringify(babelSettings)],
-      
       include: path.join(__dirname, 'src')
     }, {
       test: /\.scss$/,
       loaders: ['style', 'css', 'autoprefixer', 'sass']
+    }, {
+      test: /\.css$/, loader: 'style-loader!css-loader'
     }]
   }
 };
