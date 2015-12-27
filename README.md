@@ -1,2 +1,2 @@
 # my-family
-My family-tree website
+My family tree website
