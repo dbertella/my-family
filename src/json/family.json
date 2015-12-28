@@ -5,76 +5,129 @@
       "name": "Giorgio",
       "surname": "Bertella",
       "bornDate": "29-07-1940",
-      "bornPlace": "Berceto"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "father"
+      }]
     }, {
       "id": 2,
       "name": "Paola",
       "surname": "Dati",
       "bornDate": "17-12-1945",
-      "bornPlace": "Roma"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "mother"
+      }]
     }, {
-      "id": 10,
+      "id": 2,
       "name": "Silvana",
       "surname": "Bertella",
       "bornDate": "??-11-1968",
-      "bornPlace": "Milano??"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "child"
+      }, {
+        "name": "Cantu|Bertella",
+        "status": "mother"
+      }]
     }, {
-      "id": 20,
+      "id": 3,
       "name": "Franco",
       "surname": "Bertella",
       "bornDate": "??-09-1970",
-      "bornPlace": "Milano??"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "child"
+      }, {
+        "name": "Bertella|Martoccia",
+        "status": "father"
+      }]
     }, {
-      "id": 30,
+      "id": 4,
       "name": "Matteo",
       "surname": "Bertella",
       "bornDate": "??-10-1972",
-      "bornPlace": "Milano??"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "child"
+      }, {
+        "name": "Bertella|Sala",
+        "status": "father"
+      }]
     }, {
-      "id": 40,
+      "id": 5,
       "name": "Flavia",
       "surname": "Bertella",
       "bornDate": "30-09-1976",
-      "bornPlace": "Milano??"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "child"
+      }, {
+        "name": "Cazzaniga|Bertella",
+        "status": "mother"
+      }]
     }, {
-      "id": 50,
+      "id": 6,
       "name": "Daniele",
       "surname": "Bertella",
       "bornDate": "06-01-1985",
-      "bornPlace": "Vimercate"
+      "families": [{
+        "name": "Bertella|Dati",
+        "status": "child"
+      }, {
+        "name": "Bertella|Mercier",
+        "status": "father"
+      }]
     }, {
-      "id": 11,
+      "id": 7,
       "name": "Vittorio",
       "surname": "Cantu",
-      "bornDate": "??-??-1967",
-      "bornPlace": "Milano??"
+      "bornDate": "??-??-1967"
     }, {
-      "id": 101,
+      "id": 8,
+      "name": "Tiziana",
+      "surname": "Martoccia",
+      "bornDate": "??-??-19**"
+    }, {
+      "id": 9,
+      "name": "Emma",
+      "surname": "Sala",
+      "bornDate": "??-??-1967"
+    }, {
+      "id": 10,
+      "name": "Andrea",
+      "surname": "Cazzaniga",
+      "bornDate": "??-??-1967"
+    }, {
+      "id": 11,
+      "name": "Aurelie",
+      "surname": "Mercier",
+      "bornDate": "25-01-1984"
+    }, {
+      "id": 12,
       "name": "Tommaso",
       "surname": "Cantu",
-      "bornDate": "15-03-1994",
-      "bornPlace": "Milano"
+      "bornDate": "15-03-1994"
     }, {
-      "id": 102,
+      "id": 13,
       "name": "Samuele",
       "surname": "Cantu",
-      "bornDate": "??-??-2001",
-      "bornPlace": "??"
+      "bornDate": "??-??-2001"
     }, {
-      "id": 103,
+      "id": 14,
       "name": "Lorenzo",
       "surname": "Cantu",
-      "bornDate": "??-??-2003",
-      "bornPlace": "??"
+      "bornDate": "??-??-2003"
     }, {
-      "id": 104,
+      "id": 15,
       "name": "Valerio",
       "surname": "Cantu",
-      "bornDate": "??-??-2007",
-      "bornPlace": ""
+      "bornDate": "??-??-2007"
     }
   ],
-  "family": {
+  "families":{
+    "name":
+   }{
     "name": "Bertella|Dati",
     "husband": {
       "id": 1,
