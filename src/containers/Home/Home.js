@@ -7,9 +7,9 @@ import { SimpleForm } from 'components';
 class Member extends Component {
   render() {
     const { member } = this.props;
-    let memberStyle = {
+    const memberStyle = {
       display: 'flex',
-      flexFlow: 'column',
+      flexFlow: 'column wrap',
       justifyContent: 'space-around',
       alignItems: 'center',
       height: 150,
@@ -35,22 +35,29 @@ class Family extends Component {
       flexFlow: 'row',
       justifyContent: 'center',
     };
-    return (
-      <div style={familyStyle}>
-      {
-        family.map((member, i) => <Member member={member} key={i} />)
+    let children = [];
+    let parents = [];
+    family.forEach((member, i) => {
+      if (member.statusInFamily === 'child') {
+        children.push(<Member member={member} key={i} />);
+      } else {
+        parents.push(<Member member={member} key={i} />);
       }
+    });
+    return (
+      <div>
+        <div style={familyStyle}>
+          { parents }
+        </div>
+        <div style={familyStyle}>
+          { children }
+        </div>
       </div>
     );
   }
 }
 
 class FamilyTree extends Component {
-  // getMember(memberId) {
-  //   const { members } = this.props.family;
-  //   const member = _.find(members, {id: memberId});
-  //   return member;
-  // }
 
   render() {
     const { families } = this.props;
