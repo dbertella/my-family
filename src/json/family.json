@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Giorgio",
       "surname": "Bertella",
-      "bornDate": "29-07-1940",
+      "bornDate": "19400729",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -15,7 +15,7 @@
       "id": 2,
       "name": "Paola",
       "surname": "Dati",
-      "bornDate": "17-12-1945",
+      "bornDate": "19451217",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -26,7 +26,7 @@
       "id": 3,
       "name": "Silvana",
       "surname": "Bertella",
-      "bornDate": "18-11-1968",
+      "bornDate": "19681118",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -40,7 +40,7 @@
       "id": 4,
       "name": "Franco",
       "surname": "Bertella",
-      "bornDate": "12-09-1970",
+      "bornDate": "19700912",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -54,7 +54,7 @@
       "id": 5,
       "name": "Matteo",
       "surname": "Bertella",
-      "bornDate": "14-10-1972",
+      "bornDate": "19721014",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -68,7 +68,7 @@
       "id": 6,
       "name": "Flavia",
       "surname": "Bertella",
-      "bornDate": "30-09-1976",
+      "bornDate": "19760930",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -82,7 +82,7 @@
       "id": 7,
       "name": "Daniele",
       "surname": "Bertella",
-      "bornDate": "06-01-1985",
+      "bornDate": "19850106",
       "families": [
         {
           "name": "Bertella|Dati",
@@ -96,7 +96,7 @@
       "id": 8,
       "name": "Vittorio",
       "surname": "Cantu",
-      "bornDate": "04-10-1966",
+      "bornDate": "19661004",
       "families": [
         {
           "name": "Cantu|Bertella",
@@ -107,29 +107,29 @@
       "id": 9,
       "name": "Tiziana",
       "surname": "Martoccia",
-      "bornDate": "??-??-1974",
+      "bornDate": "19740101",
       "families": [
         {
           "name": "Bertella|Martoccia",
-          "status": "father"
+          "status": "mother"
         }
       ]
     }, {
       "id": 10,
       "name": "Emma",
       "surname": "Sala",
-      "bornDate": "??-??-1973",
+      "bornDate": "19730101",
       "families": [
         {
           "name": "Bertella|Sala",
-          "status": "father"
+          "status": "mother"
         }
       ]
     }, {
       "id": 11,
       "name": "Andrea",
       "surname": "Cazzaniga",
-      "bornDate": "??-??-1975",
+      "bornDate": "19750101",
       "families": [
         {
           "name": "Cazzaniga|Bertella",
@@ -140,18 +140,18 @@
       "id": 12,
       "name": "Aurelie",
       "surname": "Mercier",
-      "bornDate": "25-01-1984",
+      "bornDate": "19840125",
       "families": [
         {
           "name": "Bertella|Mercier",
-          "status": "father"
+          "status": "mother"
         }
       ]
     }, {
       "id": 13,
       "name": "Tommaso",
       "surname": "Cantu",
-      "bornDate": "15-03-1998",
+      "bornDate": "19980304",
       "families": [
         {
           "name": "Cantu|Bertella",
@@ -162,7 +162,7 @@
       "id": 14,
       "name": "Samuele",
       "surname": "Cantu",
-      "bornDate": "??-??-2001",
+      "bornDate": "20010816",
       "families": [
         {
           "name": "Cantu|Bertella",
@@ -173,7 +173,7 @@
       "id": 15,
       "name": "Lorenzo",
       "surname": "Cantu",
-      "bornDate": "??-??-2003",
+      "bornDate": "20031215",
       "families": [
         {
           "name": "Cantu|Bertella",
@@ -184,10 +184,120 @@
       "id": 16,
       "name": "Valerio",
       "surname": "Cantu",
-      "bornDate": "??-??-2007",
+      "bornDate": "20070811",
       "families": [
         {
           "name": "Cantu|Bertella",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 17,
+      "name": "Edoardo",
+      "surname": "Bertella",
+      "bornDate": "20050101",
+      "families": [
+        {
+          "name": "Bertella|Sala",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 18,
+      "name": "Marco",
+      "surname": "Cazzaniga",
+      "bornDate": "20060706",
+      "families": [
+        {
+          "name": "Cazzaniga|Bertella",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 19,
+      "name": "Matilde",
+      "surname": "Bertella",
+      "bornDate": "20070801",
+      "families": [
+        {
+          "name": "Bertella|Sala",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 20,
+      "name": "Sofia",
+      "surname": "Cazzaniga",
+      "bornDate": "20081014",
+      "families": [
+        {
+          "name": "Cazzaniga|Bertella",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 21,
+      "name": "Arianna",
+      "surname": "Bertella",
+      "bornDate": "20090628",
+      "families": [
+        {
+          "name": "Bertella|Sala",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 22,
+      "name": "Elisa",
+      "surname": "Cazzaniga",
+      "bornDate": "20120104",
+      "families": [
+        {
+          "name": "Cazzaniga|Bertella",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 23,
+      "name": "Bianca",
+      "surname": "Bertella",
+      "bornDate": "20090707",
+      "families": [
+        {
+          "name": "Bertella|Martoccia",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 24,
+      "name": "Angelica",
+      "surname": "Bertella",
+      "bornDate": "20101218",
+      "families": [
+        {
+          "name": "Bertella|Martoccia",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 25,
+      "name": "Dante",
+      "surname": "Bertella",
+      "bornDate": "20131217",
+      "families": [
+        {
+          "name": "Bertella|Martoccia",
+          "status": "child"
+        }
+      ]
+    }, {
+      "id": 26,
+      "name": "Liam",
+      "surname": "Bertella",
+      "bornDate": "20151212",
+      "families": [
+        {
+          "name": "Bertella|Mercier",
           "status": "child"
         }
       ]
