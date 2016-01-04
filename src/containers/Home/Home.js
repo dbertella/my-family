@@ -108,17 +108,11 @@ class FamilyTree extends Component {
 }
 class NextBirthday extends Component {
   render() {
-    const { members } = this.props;
-    const now = moment().format();
-    const membersOrdered = _.sortBy(members, (member)=> {
-      return moment(member.bornDate).format('MMDD');
-    });
-    members.forEach((el, i) => {
-
-    });
+    const { member } = this.props;
     return (
     	<div>
-	      <h1>Il prossimo compleanno sarà: </h1>
+	      <h1>Il prossimo compleanno è {member.name} {moment(member.bornDate).set('year', moment().year()).locale('it').fromNow()}
+        </h1>
       </div>
     );
   }
@@ -129,8 +123,9 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      members: {},
-      families: {}
+      // members: {},
+      families: {},
+      nextBirtday: {}
     }
   }
   componentDidMount() {
@@ -151,18 +146,24 @@ class Home extends Component {
           });
           families[family.name].push(memberInFAmily);
         });
+
+        member.nextBirtday = moment(member.bornDate).set('year', moment().get('year')).diff(moment(), 'days');
+        if (member.nextBirtday < 1) {
+          member.nextBirtday = 400;
+        }
       });
       console.log(families);
       this.setState({
         families: families,
-        members: j.members
+        // members: j.members,
+        nextBirtday: _.sortBy(j.members, 'nextBirtday')[0]
       });
     })
   }
   render() {
     return (
     	<div>
-        <NextBirthday members={this.state.members} />
+        <NextBirthday member={this.state.nextBirtday} />
         <FamilyTree families={this.state.families} />
       </div>
     );
