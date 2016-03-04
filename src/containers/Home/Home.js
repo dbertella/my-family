@@ -146,9 +146,9 @@ class Home extends Component {
           });
           families[family.name].push(memberInFAmily);
         });
-
+        console.log(member)
         member.nextBirtday = moment(member.bornDate).set('year', moment().get('year')).diff(moment(), 'days');
-        if (member.nextBirtday < 1) {
+        if (member.nextBirtday <= -1) {
           member.nextBirtday = 400;
         }
       });
