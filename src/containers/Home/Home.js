@@ -32,11 +32,12 @@ class Member extends Component {
 
 class Family extends Component {
   render() {
-    const { family, familyName } = this.props;
+    const { family, familyName, even } = this.props;
     const familyWrapper = {
-      border: '5px solid #000',
-      margin: 25,
+      // border: '5px solid #000',
+      padding: '5em 1em',
       position: 'relative',
+      background: even ? '#FAFAFA' : '#fff'
     };
     const row = {
       display: 'flex',
@@ -45,20 +46,20 @@ class Family extends Component {
     };
     const familyNameStyle = {
       position: 'absolute',
-      top: -35,
-      left: -5,
+      top: '1em',
+      left: '1em',
       height: 30,
       lineHeight: '30px',
       fontSize: 23,
-      color: '#777',
-      background: '#fff',
+      color: '#333',
       padding: '0 15px',
-      borderTop: 5,
-      borderLeft: 5,
-      borderRight: 5,
-      borderBottom: 0,
-      borderStyle: 'solid',
-      borderColor: '#000',
+      textTransform: 'uppercase',
+      // borderTop: 5,
+      // borderLeft: 5,
+      // borderRight: 5,
+      // borderBottom: 0,
+      // borderStyle: 'solid',
+      // borderColor: '#000',
       zIndex: 1
     }
     let children = [];
@@ -95,7 +96,7 @@ class FamilyTree extends Component {
     };
     const familyWrappers = Object.keys(families).map((familyName, i) => {
       return (
-        <Family family={families[familyName]} familyName={familyName} key={i} />
+        <Family family={families[familyName]} familyName={familyName} key={i} even={i % 2 === 0} />
       );
     });
 
