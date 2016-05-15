@@ -14,7 +14,7 @@ class Member extends Component {
       display: 'flex',
       order: (member.statusInFamily === 'father') ? -1 : 1,
       flexFlow: 'column wrap',
-      justifyContent: 'space-around',
+      justifyContent: 'center',
       alignItems: 'center',
       height: 150,
       width: 150,
@@ -24,7 +24,6 @@ class Member extends Component {
     return (
       <div style={memberStyle}>
         { member.name }
-        { member.surname }
         { moment(member.bornDate).locale('it').format('LL') }
       </div>
     );
@@ -113,7 +112,7 @@ class NextBirthday extends Component {
     const { member } = this.props;
     return (
     	<div>
-	      <h1>Il prossimo compleanno è {member.name} {moment(member.bornDate).set('year', moment().year()).locale('it').fromNow()}
+	      <h1>Il prossimo compleanno è quello di: {member.name} {moment(member.bornDate).set('year', moment().year()).locale('it').fromNow()}
         </h1>
       </div>
     );
