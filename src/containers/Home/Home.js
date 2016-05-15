@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
+import axios from 'axios';
+
 import { SimpleForm } from 'components';
 
 
@@ -12,7 +14,7 @@ class Member extends Component {
       display: 'flex',
       order: (member.statusInFamily === 'father') ? -1 : 1,
       flexFlow: 'column wrap',
-      justifyContent: 'space-around',
+      justifyContent: 'center',
       alignItems: 'center',
       height: 150,
       width: 150,
@@ -22,7 +24,6 @@ class Member extends Component {
     return (
       <div style={memberStyle}>
         { member.name }
-        { member.surname }
         { moment(member.bornDate).locale('it').format('LL') }
       </div>
     );
@@ -111,7 +112,7 @@ class NextBirthday extends Component {
     const { member } = this.props;
     return (
     	<div>
-	      <h1>Il prossimo compleanno è {member.name} {moment(member.bornDate).set('year', moment().year()).locale('it').fromNow()}
+	      <h1>Il prossimo compleanno è quello di: {member.name} {moment(member.bornDate).set('year', moment().year()).locale('it').fromNow()}
         </h1>
       </div>
     );
@@ -129,11 +130,11 @@ class Home extends Component {
     }
   }
   componentDidMount() {
-    fetch('/src/json/family.json')
-    .then((res)=> res.json())
+    axios.get('/src/json/family.json')
     .then((j)=> {
+      console.log(j);
       let families = {};
-      j.members.forEach(member => {
+      j.data.members.forEach(member => {
         // debugger;
         member.families.forEach(family => {
           if(!_.has(families, family.name)) {
@@ -156,7 +157,7 @@ class Home extends Component {
       this.setState({
         families: families,
         // members: j.members,
-        nextBirtday: _.sortBy(j.members, 'nextBirtday')[0]
+        nextBirtday: _.sortBy(j.data.members, 'nextBirtday')[0]
       });
     })
   }
