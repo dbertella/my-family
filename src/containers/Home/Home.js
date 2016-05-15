@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
+import axios from 'axios';
+
 import { SimpleForm } from 'components';
 
 
@@ -129,11 +131,11 @@ class Home extends Component {
     }
   }
   componentDidMount() {
-    fetch('/src/json/family.json')
-    .then((res)=> res.json())
+    axios.get('/src/json/family.json')
     .then((j)=> {
+      console.log(j);
       let families = {};
-      j.members.forEach(member => {
+      j.data.members.forEach(member => {
         // debugger;
         member.families.forEach(family => {
           if(!_.has(families, family.name)) {
@@ -156,7 +158,7 @@ class Home extends Component {
       this.setState({
         families: families,
         // members: j.members,
-        nextBirtday: _.sortBy(j.members, 'nextBirtday')[0]
+        nextBirtday: _.sortBy(j.data.members, 'nextBirtday')[0]
       });
     })
   }
