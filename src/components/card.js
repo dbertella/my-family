@@ -1,8 +1,6 @@
 import React from 'react'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-// import { query } from '../cardsQueries'
-
 
 export const query = graphql`
   query {
@@ -14,7 +12,7 @@ export const query = graphql`
       }
     }
 
-    ange: file(relativePath: { eq: "ange.jpg" }) {
+    angelica: file(relativePath: { eq: "angelica.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
@@ -22,7 +20,7 @@ export const query = graphql`
       }
     }
 
-    ange2: file(relativePath: { eq: "ange2.jpg" }) {
+    angelica2: file(relativePath: { eq: "angelica2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid
@@ -317,13 +315,21 @@ export const query = graphql`
         }
       }
     }
+
+    backcard: file(relativePath: { eq: "backcard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
-const Image = () => (
+const Card = ({ name }) => (
   <StaticQuery
     query={query}
-    render={data => <Img fluid={data.andrea.childImageSharp.fluid} />}
+    render={data => <Img fluid={data[name].childImageSharp.fluid} />}
   />
 )
-export default Image
+export default Card
