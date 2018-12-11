@@ -16,10 +16,7 @@ const Title = styled.div`
 const lookupMemberInTime = (name, year) => {
   const [lookupKey] = name.split('2')
   const memberInfo = members[lookupKey]
-  console.log(memberInfo)
-  const [memberYear] = memberInfo
-    ? memberInfo.bornDate.split('-')
-    : '2020'
+  const [memberYear] = memberInfo.bornDate.split('-')
   return memberYear <= year ? name : 'backcard'
 }
 const IndexPage = () => {
@@ -67,8 +64,8 @@ const IndexPage = () => {
           lookupMember('tiziana'),
           lookupMember('bianca'),
           lookupMember('angelica'),
-          lookupMember('backcard'),
-          lookupMember('backcard'),
+          'backcard',
+          'backcard',
         ]}
       />
       <Family
@@ -91,14 +88,7 @@ const IndexPage = () => {
           lookupMember('elisa'),
         ]}
       />
-      <Family
-        familyName="???"
-        members={[
-          lookupMember('backcard'),
-          lookupMember('backcard'),
-          lookupMember('backcard'),
-        ]}
-      />
+      <Family familyName="???" members={['backcard', 'backcard', 'backcard']} />
       <Family
         familyName="Principi"
         members={[
@@ -108,8 +98,8 @@ const IndexPage = () => {
           lookupMember('edoardo2'),
           lookupMember('marco2'),
           lookupMember('valerio2'),
-          lookupMember('backcard'),
-          lookupMember('backcard'),
+          'backcard',
+          'backcard',
         ]}
       />
       <Family
@@ -121,7 +111,7 @@ const IndexPage = () => {
           lookupMember('arianna2'),
           lookupMember('angelica2'),
           lookupMember('elisa2'),
-          lookupMember('backcard'),
+          'backcard',
         ]}
       />
       <Link to="/page-2/">Go to page 2</Link>

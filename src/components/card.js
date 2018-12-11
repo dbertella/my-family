@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-export const query = graphql`
+const query = graphql`
   query {
     andrea: file(relativePath: { eq: "andrea.jpg" }) {
       childImageSharp {
