@@ -1,17 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 import Layout from '../components/layout'
 import { Family } from '../components/family'
 import { setConfig } from 'react-hot-loader'
 import { members } from '../members'
 
 setConfig({ pureSFC: true })
-
-const Title = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
 
 const lookupMemberInTime = (name, year) => {
   const [lookupKey] = name.split('2')
@@ -23,17 +17,7 @@ const IndexPage = () => {
   const [year, setYear] = React.useState('2018')
   const lookupMember = name => lookupMemberInTime(name, year)
   return (
-    <Layout>
-      <Title>
-        <h1>Anno {year}</h1>
-        <input
-          type="range"
-          value={year}
-          onChange={e => setYear(e.target.value)}
-          min="1940"
-          max="2020"
-        />
-      </Title>
+    <Layout year={year} setYear={setYear}>
       <Family
         familyName="Western"
         members={[
