@@ -326,10 +326,9 @@ const query = graphql`
   }
 `
 
-const Card = ({ name }) => (
-  <StaticQuery
+const Card = ({ name }) => (console.log(name), <StaticQuery
     query={query}
     render={data => <Img fluid={data[name].childImageSharp.fluid} />}
-  />
-)
+  />)
+
 export default Card

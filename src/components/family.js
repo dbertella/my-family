@@ -8,11 +8,11 @@ const Title = styled.h3``
 const Wrapper = styled.div`
   display: flex;
   overflow-x: auto;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-flow: row nowrap;
   ${media.desktop`
-    flex-flow: row nowrap;
+    justify-content: center;
   `}
 `
 
@@ -22,7 +22,7 @@ const CardWrapper = styled.div`
   border-radius: 4px;
   margin: 2px;
   flex-shrink: 0;
-  max-width: 100%;
+  max-width: calc(100% - 0.2rem);
   ${media.desktop`
     flex-shrink: 1;
   `}
