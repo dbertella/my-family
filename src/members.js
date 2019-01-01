@@ -42,17 +42,17 @@ export const members = {
   tiziana: {
     name: 'Tiziana',
     surname: 'Martoccia',
-    bornDate: '1974-01-01',
+    bornDate: '1974-05-03',
   },
   emma: {
     name: 'Emma',
     surname: 'Sala',
-    bornDate: '1973-01-01',
+    bornDate: '1973-06-10',
   },
   andrea: {
     name: 'Andrea',
     surname: 'Cazzaniga',
-    bornDate: '1975-01-01',
+    bornDate: '1975-03-19',
   },
   aurelie: {
     name: 'Aurelie',
@@ -82,7 +82,7 @@ export const members = {
   edoardo: {
     name: 'Edoardo',
     surname: 'Bertella',
-    bornDate: '2005-01-01',
+    bornDate: '2005-05-22',
   },
   marco: {
     name: 'Marco',
